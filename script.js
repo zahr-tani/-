@@ -1,33 +1,59 @@
 const startButton = document.getElementById('start-button');
-const progressBar = document.getElementById('progress-bar'); 
 
 startButton.addEventListener('click', () => {
-    document.getElementById('clue1').classList.add('show');
+    document.getElementById('clue1').style.display = 'block';
     startButton.style.display = 'none';
-    updateProgressBar(25);
 });
 
-function nextClue(nextId, progress) {
-    document.querySelectorAll('.clue').forEach(clue => clue.classList.remove('show'));
-    document.getElementById(nextId).classList.add('show');
-    updateProgressBar(progress);
+function nextClue(nextId) {
+    document.querySelectorAll('.clue').forEach(clue => clue.style.display = 'none');
+    document.getElementById(nextId).style.display = 'block';
 }
 
 function showSuccess() {
-    document.querySelectorAll('.clue').forEach(clue => clue.classList.remove('show'));
-    document.getElementById('success').classList.add('show');
-    updateProgressBar(100);
-    launchConfetti();
+    document.querySelectorAll('.clue').forEach(clue => clue.style.display = 'none');
+    document.getElementById('success').style.display = 'block';
+    startConfetti();
 }
 
-function updateProgressBar(progress) {
-    progressBar.style.width = `${progress}%`;
-}
+/* Confetti Animation */
+function startConfetti() {
+    const canvas = document.getElementById('confetti');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-function launchConfetti() {
-    confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 }
-    });
+    const confettiCount = 150;
+    const confetti = Array.from({ length: confettiCount }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height - canvas.height,
+        w: Math.random() * 10 + 5,
+        h: Math.random() * 5 + 2,
+        color: `hsl(${Math.random() * 360}, 70%, 70%)`,
+        speed: Math.random() * 5 + 2,
+        angle: Math.random() * Math.PI * 2
+    }));
+
+    function drawConfetti() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        confetti.forEach(p => {
+            ctx.fillStyle = p.color;
+            ctx.fillRect(p.x, p.y, p.w, p.h);
+        });
+    }
+
+    function updateConfetti() {
+        confetti.forEach(p => {
+            p.y += p.speed;
+            if (p.y > canvas.height) p.y = -p.h;
+        });
+    }
+
+    function animateConfetti() {
+        drawConfetti();
+        updateConfetti();
+        requestAnimationFrame(animateConfetti);
+    }
+
+    animateConfetti();
 }
