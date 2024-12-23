@@ -7,30 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="progress-bar"></div>
-
     <div class="container">
         <h1>Welcome to the Treasure Hunt!</h1>
         <p>Follow the clues to discover your treasure. Click the button below to begin.</p>
         <button id="start-button">Start the Hunt</button>
         
         <div id="clue1" class="clue">
-            <p><strong>Clue 1:</strong> Exit here and take 20 paces toward the rising sun. Look for a cozy spot where coffee flows.</p>
-            <button onclick="nextClue('clue2', 50)">Next Clue</button>
+            <p><strong>Clue 1:</strong> When was Bin Zahr بن زهر established? Ask an employee for help.</p>
+            <button onclick="nextClue('clue2')">Next Clue</button>
         </div>
         
         <div id="clue2" class="clue">
-            <p><strong>Clue 2:</strong> Near the red awning, a door invites you in. What lies beyond holds your reward.</p>
+            <p><strong>Clue 2:</strong> Maybe the clue is on the card attached to the key.</p>
             <button onclick="showSuccess()">Claim Your Treasure</button>
         </div>
 
         <div id="success" class="success">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Treasure_chest.svg/1024px-Treasure_chest.svg.png" alt="Treasure Chest" style="width: 100px; margin-bottom: 20px;">
-            <p>Congratulations! You've found the treasure. Present this page at [Coffee Shop Name] to claim your free coffee!</p>
+            <p>🎉 Congratulations! You've found the treasure. Present this page at <strong>Bin Zahr بن زهر</strong> to claim your free coffee! ☕</p>
+            <canvas id="confetti"></canvas>
         </div>
     </div>
-
     <script src="script.js"></script>
-
 </body>
 </html>
