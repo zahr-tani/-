@@ -1,22 +1,24 @@
+// Start Button Functionality
 const startButton = document.getElementById('start-button');
-
 startButton.addEventListener('click', () => {
     document.getElementById('clue1').style.display = 'block';
     startButton.style.display = 'none';
 });
 
+// Navigate to Next Clue
 function nextClue(nextId) {
     document.querySelectorAll('.clue').forEach(clue => clue.style.display = 'none');
     document.getElementById(nextId).style.display = 'block';
 }
 
+// Show Success Page
 function showSuccess() {
     document.querySelectorAll('.clue').forEach(clue => clue.style.display = 'none');
     document.getElementById('success').style.display = 'block';
     startConfetti();
 }
 
-/* Confetti Animation */
+// Confetti Animation
 function startConfetti() {
     const canvas = document.getElementById('confetti');
     const ctx = canvas.getContext('2d');
@@ -30,8 +32,7 @@ function startConfetti() {
         w: Math.random() * 10 + 5,
         h: Math.random() * 5 + 2,
         color: `hsl(${Math.random() * 360}, 70%, 70%)`,
-        speed: Math.random() * 5 + 2,
-        angle: Math.random() * Math.PI * 2
+        speed: Math.random() * 5 + 2
     }));
 
     function drawConfetti() {
@@ -57,3 +58,4 @@ function startConfetti() {
 
     animateConfetti();
 }
+
