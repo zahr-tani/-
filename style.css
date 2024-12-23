@@ -1,27 +1,31 @@
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #e8f5e9; /* Light green */
-    color: #2e7d32; /* Dark green */
+    background: #eaf5ea; /* Soft light green */
+    color: #2b5d34; /* Deep green */
 }
 
+/* Main Container */
 .container {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background: #f5f5dc; /* Beige */
+    background: #fef9ef; /* Beige */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+/* Header Styles */
 h1 {
-    color: #2e7d32; /* Dark green */
+    color: #2b5d34;
 }
 
+/* Button Styles */
 button {
-    background: #81c784; /* Light green */
+    background: #8ecf9e; /* Soft green */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -31,21 +35,23 @@ button {
 }
 
 button:hover {
-    background: #66bb6a; /* Slightly darker green */
+    background: #6fb97c; /* Darker green */
 }
 
+/* Clue Text Styles */
 .clue {
     display: none;
     margin-top: 20px;
     font-size: 18px;
 }
 
+/* Success Page Styles */
 .success {
     display: none;
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
-    color: #2e7d32; /* Dark green */
+    color: #2b5d34;
 }
 
 /* Confetti Canvas Styling */
