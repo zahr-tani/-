@@ -1,5 +1,5 @@
 const startButton = document.getElementById('start-button');
-const progressBar = document.getElementById('progress-bar');
+const progressBar = document.getElementById('progress-bar'); 
 
 startButton.addEventListener('click', () => {
     document.getElementById('clue1').classList.add('show');
