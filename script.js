@@ -58,4 +58,28 @@ function startConfetti() {
 
     animateConfetti();
 }
+const enContent = document.getElementById('content-en');
+const arContent = document.getElementById('content-ar');
+const switchToEnglish = document.getElementById('switch-en');
+const switchToArabic = document.getElementById('switch-ar');
+
+switchToEnglish.addEventListener('click', () => {
+    enContent.style.display = 'block';
+    arContent.style.display = 'none';
+});
+
+switchToArabic.addEventListener('click', () => {
+    enContent.style.display = 'none';
+    arContent.style.display = 'block';
+});
+
+function nextClue(nextId) {
+    document.querySelectorAll('.clue').forEach(clue => clue.style.display = 'none');
+    document.getElementById(nextId).style.display = 'block';
+}
+
+function showSuccess() {
+    document.querySelectorAll('.clue').forEach(clue => clue.style.display = 'none');
+    document.querySelectorAll('.success').forEach(success => success.style.display = 'block');
+}
 
