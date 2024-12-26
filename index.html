@@ -3,30 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bin Zahr Treasure Hunt</title>
+    <title>Bon Zahr Treasure Hunt</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Treasure Hunt!</h1>
+    <header>
+        <img src="logo1.png" alt="Bon Zahr Logo" class="header-logo">
+    </header>
+
+    <div class="language-switcher">
+        <button id="switch-en">English</button>
+        <button id="switch-ar">عربي</button>
+    </div>
+
+    <div class="container" id="content-en">
+        <h1>Welcome to Bon Zahr Treasure Hunt!</h1>
         <p>Follow the clues to discover your treasure. Click the button below to begin.</p>
         <button id="start-button">Start the Hunt</button>
         
-        <div id="clue1" class="clue">
-            <p><strong>Clue 1:</strong> When was Bin Zahr بن زهر established? Ask an employee for help.</p>
-            <button onclick="nextClue('clue2')">Next Clue</button>
+        <div id="clue1-en" class="clue">
+            <p><strong>Clue 1:</strong> When was Bon Zahr established? Ask an employee for help.</p>
+            <button onclick="nextClue('clue2-en')">Next Clue</button>
         </div>
         
-        <div id="clue2" class="clue">
+        <div id="clue2-en" class="clue">
             <p><strong>Clue 2:</strong> Maybe the clue is on the card attached to the key.</p>
             <button onclick="showSuccess()">Claim Your Treasure</button>
         </div>
 
-        <div id="success" class="success">
-            <p>🎉 Congratulations! You've found the treasure. Present this page at <strong>Bin Zahr بن زهر</strong> to claim your free coffee! ☕</p>
-            <canvas id="confetti"></canvas>
+        <div id="success-en" class="success">
+            <p>🎉 Congratulations! You've found the treasure. Present this page at <strong>Bon Zahr</strong> to claim your free coffee! ☕</p>
+            <video controls width="600">
+                <source src="congrats.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=<your-map-link>" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
         </div>
     </div>
+
+    <div class="container rtl" id="content-ar" style="display: none;">
+        <h1>مرحبًا بكم في بُن زهر!</h1>
+        <p>اتبع القرائن لاكتشاف الكنز الخاص بك. انقر فوق الزر أدناه للبدء.</p>
+        <button id="start-button-ar">ابدأ البحث</button>
+        
+        <div id="clue1-ar" class="clue">
+            <p><strong>القرينة الأولى:</strong> متى تم إنشاء بُن زهر؟ اسأل أحد الموظفين.</p>
+            <button onclick="nextClue('clue2-ar')">القرينة التالية</button>
+        </div>
+        
+        <div id="clue2-ar" class="clue">
+            <p><strong>القرينة الثانية:</strong> ربما تكون القرينة على البطاقة المرفقة بالمفتاح.</p>
+            <button onclick="showSuccess()">احصل على الكنز</button>
+        </div>
+
+        <div id="success-ar" class="success">
+            <p>🎉 تهانينا! لقد وجدت الكنز. قدم هذه الصفحة في <strong>بُن زهر</strong> للحصول على قهوتك المجانية! ☕</p>
+            <video controls width="600">
+                <source src="congrats.mp4" type="video/mp4">
+                متصفحك لا يدعم الفيديو.
+            </video>
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=<your-map-link>" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <img src="logo2.png" alt="Footer Logo" class="footer-logo">
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
