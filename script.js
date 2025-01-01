@@ -9,7 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
         showScreen('screen-question');
     });
 
-    document.getElementById('next-to-clue1').addEventListener('click', () => {
+    document.getElementById('submit-answer').addEventListener('click', () => {
+        const answerBox = document.getElementById('answer-box');
+        const answer = answerBox.value.trim();
+        if (answer === '1995') {
+            alert('Correct answer! Moving to the first clue.');
+            document.getElementById('show-clue').disabled = false;
+        } else {
+            alert('Incorrect! Try again.');
+        }
+    });
+
+    document.getElementById('show-clue').addEventListener('click', () => {
         showScreen('screen-clue1');
     });
 
