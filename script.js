@@ -10,13 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
         showScreen('screen-question');
     });
 
-    // Validate answer and show the clue button
+    // Validate answer
     document.getElementById('submit-answer').addEventListener('click', () => {
         const answerBox = document.getElementById('answer-box');
         const answer = answerBox.value.trim();
         if (answer === '1995') {
-            alert('Correct answer! Moving to the first clue.');
-            document.getElementById('show-clue').disabled = false;
+            alert('Correct answer!');
         } else {
             alert('Incorrect! Try again.');
         }
