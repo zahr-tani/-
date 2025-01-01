@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,16 +16,30 @@ body {
 h1, h2 {
     color: #AF1E4B;
 }
+button, input {
+    font-size: calc(1rem + 0.5vw);
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
 button {
     background-color: #AF1E4B;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
 }
 button:hover {
     background-color: #8B153B;
 }
-
+input {
+    border: 2px solid #AF1E4B;
+    width: 80%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 5px;
+}
+p {
+    font-size: calc(0.9rem + 0.5vw);
+}
