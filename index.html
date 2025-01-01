@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Start Screen -->
     <div id="screen-start" class="screen active">
         <h1>Welcome to Bin Zahr Treasure Hunt</h1>
         <button id="start-button">Start the Hunt</button>
     </div>
 
+    <!-- Question Screen -->
     <div id="screen-question" class="screen">
         <h2>Question</h2>
         <p>When was Bin Zahr established?</p>
@@ -20,29 +22,22 @@
         <button id="show-clue" disabled>Need a Clue?</button>
     </div>
 
+    <!-- First Clue Screen -->
     <div id="screen-clue1" class="screen">
         <h2>Clue 1</h2>
         <p>Ask an employee.</p>
         <button id="next-to-clue2">Next Clue</button>
     </div>
 
+    <!-- Second Clue Screen -->
     <div id="screen-clue2" class="screen">
         <h2>Clue 2</h2>
         <p>Maybe the clue is on the card attached to the key.</p>
         <button id="show-map">See the Map</button>
     </div>
 
+    <!-- Map Screen -->
     <div id="screen-map" class="screen">
         <h2>Find Your Treasure</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d928.2135023624477!2d39.1833368!3d21.4742442!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cf46000ed021%3A0x3c5f7a34d10490dd!2z2KjZhiDYtNmK2YfZiNmGINmE2YTYqtit2YE!5e0!3m2!1sen!2ssa!4v1735636506571!5m2!1sen!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <button id="finish">Finish</button>
-    </div>
-
-    <div id="screen-congratulations" class="screen">
-        <h1>🎉 Congratulations! 🎉</h1>
-        <p>You’ve found the treasure! Present this page at Bin Zahr ☕ to claim your free coffee.</p>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d928.2135023624477!2d39.1833368!3d21.4742442!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cf46000ed021%3A0x3c
