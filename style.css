@@ -6,16 +6,20 @@ body {
     color: #333;
     text-align: center;
 }
+
 .screen {
     display: none;
     padding: 20px;
 }
+
 .screen.active {
     display: block;
 }
+
 h1, h2 {
     color: #AF1E4B;
 }
+
 button, input {
     font-size: calc(1rem + 0.5vw);
     padding: 10px 20px;
@@ -23,14 +27,17 @@ button, input {
     border: none;
     border-radius: 5px;
 }
+
 button {
     background-color: #AF1E4B;
     color: #fff;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #8B153B;
 }
+
 input {
     border: 2px solid #AF1E4B;
     width: 80%;
@@ -40,6 +47,7 @@ input {
     text-align: center;
     border-radius: 5px;
 }
+
 p {
     font-size: calc(0.9rem + 0.5vw);
 }
