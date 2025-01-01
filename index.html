@@ -1,92 +1,46 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bon Zahr Treasure Hunt</title>
+    <title>Bin Zahr Treasure Hunt</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="logo1.png" alt="Bon Zahr Logo" class="header-logo">
-    </header>
-
-    <div class="language-switcher">
-        <button id="switch-en">English</button>
-        <button id="switch-ar">عربي</button>
-    </div>
-
-    <div class="container" id="content-en">
-        <h1>Welcome to Bon Zahr Treasure Hunt!</h1>
-        <p>Follow the clues to discover your treasure. Click the button below to begin.</p>
-        <button id="start-button">Start the Hunt</button>
-        
-        <div id="clue1-en" class="clue">
-            <p><strong>Clue 1:</strong> When was Bon Zahr established? Ask an employee for help.</p>
-            <button onclick="nextClue('clue2-en')">Next Clue</button>
+    <div id="app">
+        <!-- Screen 1: Start Hunt -->
+        <div id="start-screen" class="screen">
+            <h1>Welcome to Bin Zahr Treasure Hunt!</h1>
+            <p>Follow the clues to discover your treasure. Click the button below to begin.</p>
+            <button id="start-button">Start the Hunt</button>
         </div>
-        
-        <div id="clue2-en" class="clue">
+
+        <!-- Screen 2: Question -->
+        <div id="question-screen" class="screen hidden">
+            <h2>When was Bin Zahr established?</h2>
+            <button id="show-clue1">Need a clue?</button>
+        </div>
+
+        <!-- Screen 3: Clue 1 -->
+        <div id="clue1-screen" class="screen hidden">
+            <p><strong>Clue 1:</strong> Ask an employee for help.</p>
+            <button id="show-clue2">Next Clue</button>
+        </div>
+
+        <!-- Screen 4: Clue 2 -->
+        <div id="clue2-screen" class="screen hidden">
             <p><strong>Clue 2:</strong> Maybe the clue is on the card attached to the key.</p>
-            <button onclick="showSuccess()">Claim Your Treasure</button>
+            <button id="show-congrats">Claim Your Treasure</button>
         </div>
 
-        <div id="success-en" class="success">
-            <p>🎉 Congratulations! You've found the treasure. Present this page at <strong>Bon Zahr</strong> to claim your free coffee! ☕</p>
-            <video controls width="600">
-                <source src="congrats.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="map">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=<your-map-link>" 
-                    width="600" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
+        <!-- Screen 5: Congratulations -->
+        <div id="congrats-screen" class="screen hidden">
+            <h2>🎉 Congratulations! 🎉</h2>
+            <p>You've found the treasure. Present this page at <strong>Bin Zahr (بن زهر)</strong> to claim your free coffee! ☕</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d928.2135023624477!2d39.1833368!3d21.4742442!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cf46000ed021%3A0x3c5f7a34d10490dd!2z2KjZhiDYtNmK2YfZiNmGINmE2YTYqtit2YE!5e0!3m2!1sen!2ssa!4v1735636506571!5m2!1sen!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
-
-    <div class="container rtl" id="content-ar" style="display: none;">
-        <h1>مرحبًا بكم في بُن زهر!</h1>
-        <p>اتبع القرائن لاكتشاف الكنز الخاص بك. انقر فوق الزر أدناه للبدء.</p>
-        <button id="start-button-ar">ابدأ البحث</button>
-        
-        <div id="clue1-ar" class="clue">
-            <p><strong>القرينة الأولى:</strong> متى تم إنشاء بُن زهر؟ اسأل أحد الموظفين.</p>
-            <button onclick="nextClue('clue2-ar')">القرينة التالية</button>
-        </div>
-        
-        <div id="clue2-ar" class="clue">
-            <p><strong>القرينة الثانية:</strong> ربما تكون القرينة على البطاقة المرفقة بالمفتاح.</p>
-            <button onclick="showSuccess()">احصل على الكنز</button>
-        </div>
-
-        <div id="success-ar" class="success">
-            <p>🎉 تهانينا! لقد وجدت الكنز. قدم هذه الصفحة في <strong>بُن زهر</strong> للحصول على قهوتك المجانية! ☕</p>
-            <video controls width="600">
-                <source src="congrats.mp4" type="video/mp4">
-                متصفحك لا يدعم الفيديو.
-            </video>
-            <div class="map">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=<your-map-link>" 
-                    width="600" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <img src="logo2.png" alt="Footer Logo" class="footer-logo">
-    </footer>
 
     <script src="script.js"></script>
 </body>
